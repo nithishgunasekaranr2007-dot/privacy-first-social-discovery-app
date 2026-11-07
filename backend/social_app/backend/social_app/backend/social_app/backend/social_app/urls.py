@@ -5,8 +5,13 @@ urlpatterns = [
     path('posts/', views.post_list, name='post_list'),
 
     path(
-        'api/posts/',
+        'posts/',
         views.PostListCreateAPIView.as_view(),
         name='api-posts'
+    ),
+    path(
+        'likes/',
+        views.LikeCreateAPIView.as_view(),
+        name='api-likes'
     ),
 ]
