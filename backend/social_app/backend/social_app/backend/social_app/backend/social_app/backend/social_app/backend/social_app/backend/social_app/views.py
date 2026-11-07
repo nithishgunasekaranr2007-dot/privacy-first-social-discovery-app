@@ -23,6 +23,7 @@ class PostListCreateView(generics.ListCreateAPIView):
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+    def home(request):
+        def post_list(request):
+            
         
