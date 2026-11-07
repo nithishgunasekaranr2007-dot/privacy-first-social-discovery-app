@@ -2,3 +2,5 @@
 'social_app',
 INSTALLED_APPS
 INSTALLED_APPS = [ to its closing ]
+DATABASES 
+DATABASES = {
