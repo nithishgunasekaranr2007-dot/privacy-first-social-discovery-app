@@ -1,0 +1,25 @@
+
+from django.http import JsonResponse
+from .models import Post
+
+
+def home(request):
+    return JsonResponse({
+        "message": "Social App Backend API is running!"
+    })
+
+
+def post_list(request):
+    posts = Post.objects.all().order_by('-created_at')
+
+    data = [
+        {
+            "id": post.id,
+            "username": post.user.username,
+            "content": post.content,
+            "created_at": post.created_at
+        }
+        for post in posts
+    ]
+
+    return JsonResponse(data, safe=False)
