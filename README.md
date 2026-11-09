@@ -26,4 +26,4 @@ Project Status
 
 Disclaimer
 
-Independent educational portfolio project. Not affiliated with Grindr.
+
